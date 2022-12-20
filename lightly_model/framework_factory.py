@@ -53,3 +53,9 @@ framework_factory.register_collate_fn('simsiam', SimCLRCollateFunction(
                                                 vf_prob=0.5,
                                                 # normalize={'mean': [0, 0, 0], 'std': [1, 1, 1]}
                                             ))
+
+framework_factory.register_model('mae', MAE)
+framework_factory.register_collate_fn('mae', MAECollateFunction(
+                                                min_scale=0.35, 
+                                                # normalize={'mean': [0, 0, 0], 'std': [1, 1, 1]}
+                                            ))
